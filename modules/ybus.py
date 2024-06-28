@@ -24,8 +24,7 @@ def functionYbus(z_lines,z_sht):
 #CALCULO DE YBUS
     a_pr_trans = np.transpose(a_pr)
     y_bus = (a_pr_trans)@(y_rama)@(a_pr)
-    print(y_bus)
 
     
 
-    return 0
+    return y_bus
