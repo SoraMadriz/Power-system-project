@@ -11,19 +11,19 @@ def main():
     bus_gs = df_bus[:,2:]
     bus_gs[:,3] = (bus_gs[:,3]*np.pi)/180
     #Trx
-    print(df_trx)
     trx_gs = df_trx[:,2:]
     
 
 #METODOS DE ESTUDIO
     y_bus = fbus(z_lines,z_sht)
-    flow_gs = gaussSeidel(
+    flow_gs = gs(
             converge_radius,
             iterations_max,
             y_bus,
             z_lines,
             trx_gs,
-            z_sht
+            z_sht,
+            bus_gs
             )
 
 
